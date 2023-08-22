@@ -24,7 +24,7 @@ function Clock({ time, location }) {
     }
     else if (location === "Asia/Seoul") {
         return (
-            <span className="">Home belongs to <b>Seoul</b>, currently at {time.tz("Asia/Seoul").format("MMMM Do, h:mm:s A")}</span>
+            <span className="">Home belongs to <b>Seoul, Korea</b>, currently at {time.tz("Asia/Seoul").format("MMMM Do, h:mm:s A")}</span>
         );
     }
 }
@@ -34,7 +34,7 @@ export default function Navbar() {
 
     return (
         <nav className='text-gray-600 flex-col'>
-            <div>Industrial Engineering Student at University of Toronto</div>
+            <div>Studying engineering at University of Toronto</div>
             <div className="time-container flex-col">
                 <Clock time={time} location={"America/Toronto"} />
                 <span> </span>
