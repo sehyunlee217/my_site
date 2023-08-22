@@ -9,7 +9,8 @@ export default {
       colors: {
         primary: "#106B6B",
         background: "#e4f1ee"
-      }
+      },
+      // fontFamily: { "sans": ['Franklin Gothic Book', 'Times', 'serif'] },
     },
     screens: {
       'sm': '640px',

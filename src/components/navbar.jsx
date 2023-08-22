@@ -19,12 +19,12 @@ function useTime() {
 function Clock({ time, location }) {
     if (location === "America/Toronto") {
         return (
-            <div className="font-normal">{time.tz("America/Toronto").format("MMMM Do, h:mm:ss A")}</div>
+            <span className="">Located in <b>Toronto, Canada</b>, at {time.tz("America/Toronto").format("h:mm:s A")}.</span>
         );
     }
     else if (location === "Asia/Seoul") {
         return (
-            <div className="font-normal">{time.tz("Asia/Seoul").format("MMMM Do, h:mm:ss A")}</div>
+            <span className="">Home belongs to <b>Seoul</b>, currently at {time.tz("Asia/Seoul").format("MMMM Do, h:mm:s A")}</span>
         );
     }
 }
@@ -33,13 +33,11 @@ export default function Navbar() {
     const time = useTime();
 
     return (
-        <nav className='text-gray-500 flex-col'>
-            <div>Engineering Student at University of Toronto</div>
+        <nav className='text-gray-600 flex-col'>
+            <div>Industrial Engineering Student at University of Toronto</div>
             <div className="time-container flex-col">
-                <p>Currently located in <b>Toronto 🇨🇦</b>, at</p>
                 <Clock time={time} location={"America/Toronto"} />
-                <div className="h-2"></div>
-                <div>But from <b>Seoul 🇰🇷</b>, at</div>
+                <span> </span>
                 <Clock time={time} location={"Asia/Seoul"} />
             </div>
             <div className="flex-col">
@@ -53,8 +51,6 @@ export default function Navbar() {
                     <Link to={`/Creative`}>creative stuff</Link>
                 </div>
             </div>
-
-
         </nav>
     );
 }

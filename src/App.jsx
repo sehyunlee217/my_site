@@ -9,7 +9,6 @@ function App() {
     <main className='px-10 py-10 font-sans font-light flex-col gap-4'>
       <Header />
       <Navbar />
-      <Posts />
     </main>
   );
 }
