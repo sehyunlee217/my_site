@@ -19,14 +19,13 @@ nav> *{
   width: 100%;
 }
 
-a{
+a, .name{
   transition-property: background-color;
   transition-duration: .5s;
   transition-timing-function: ease-out;
   transition-delay: 0.1s;
   text-decoration: wavy underline rgb(229, 88, 88);
 }
-
 
 a:hover{
   background-color: #c0d8d2

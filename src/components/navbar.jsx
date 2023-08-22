@@ -25,7 +25,7 @@ function Clock({ time, location, lang }) {
         }
         else if (location === "Asia/Seoul") {
             return (
-                <span className="">집은 <b>서울</b>이며, 서울은 지금 {time.tz("Asia/Seoul").format(" h:mm:ss A")}.</span>
+                <span className="">집은 <b>서울</b>이며, 서울은 현재 {time.tz("Asia/Seoul").format(" h:mm:ss A")}.</span>
             );
         }
     }
@@ -49,7 +49,7 @@ export default function Navbar({ lang }) {
     if (lang === "kr") {
         return (
             <nav className='text-gray-600 flex-col dark:text-slate-200'>
-                <div className="font-bold text-xl">토론토 대학교 - 산업공학과 2학년</div>
+                <div className=""><b>토론토 대학교</b> - 산업공학과</div>
                 <div className="time-container flex-col">
                     <Clock time={time} lang={"kr"} location={"America/Toronto"} />
                     <span> </span>

@@ -21,7 +21,7 @@ export default function Header({ lang }) {
                 <h1 className='text-5xl py-2 font-noteworthy'>s.h.l</h1>
 
                 <div className="flex justify-between items-center">
-                    <div className='font-medium text-3xl text-primary dark:text-slate-200'>
+                    <div className='name font-medium text-2xl text-primary dark:text-slate-200 decoration-dotted'>
                         이승현
                     </div>
                     <div>
@@ -40,7 +40,7 @@ export default function Header({ lang }) {
                 <h1 className='text-5xl py-2 font-noteworthy'>s.h.l</h1>
 
                 <div className="flex justify-between items-center">
-                    <div className='font-medium text-2xl text-primary dark:text-slate-200'>
+                    <div className='name font-medium text-2xl text-primary dark:text-slate-200'>
                         <Name primary={"Joe Lee"} secondary={"Seunghyun Lee"} />
                     </div>
                     <div>
