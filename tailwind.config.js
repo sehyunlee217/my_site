@@ -8,9 +8,12 @@ export default {
     extend: {
       colors: {
         primary: "#106B6B",
+        primary_dark: "#1C2B2B",
         background: "#e4f1ee"
       },
-      // fontFamily: { "sans": ['Franklin Gothic Book', 'Times', 'serif'] },
+      fontFamily: {
+        "noteworthy": ["Noteworthy", "serif"]
+      },
     },
     screens: {
       'sm': '640px',

@@ -6,7 +6,7 @@ import Posts from './components/posts';
 function App() {
 
   return (
-    <main className='px-10 py-10 font-sans font-light flex-col gap-4'>
+    <main className='h-screen px-10 py-10 font-sans font-light flex-col gap-4 dark:bg-primary_dark'>
       <Header />
       <Navbar />
     </main>

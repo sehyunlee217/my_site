@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './App.jsx';
+import App_kr from './App_kr.jsx';
 import ErrorPage from './components/error-page.jsx';
 import About from './components/about.jsx';
 import Creative from './components/creative.jsx';
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/kr",
+    element: <App_kr />
   },
   {
     path: "/About",

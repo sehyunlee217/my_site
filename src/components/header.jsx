@@ -1,24 +1,57 @@
+import { useState } from "react";
 import logo from "../assets/jl_logo.svg";
+import { Link } from "react-router-dom";
 
-export default function Header() {
+function Name({ primary, secondary }) {
+    const [showName, setshowName] = useState(primary);
+
     return (
-        <header className="grid grid-rows-2">
-            <img className='w-20 my-3' src={logo} alt="logo"></img>
+        <span className="cursor-pointer" onMouseEnter={() => { setshowName(secondary); }}
+            onMouseLeave={() => { setshowName(primary); }}>
+            {showName}
+        </span>
+    );
 
-            <div className="flex justify-between items-center">
-                <div className='font-medium text-2xl text-primary '>
-                    Seunghyun Lee
-                </div>
-                <div>
-                    <p>
-                        light/dark
-                    </p>
+}
+
+export default function Header({ lang }) {
+    if (lang === "kr") {
+        return (
+            <header className="grid grid-rows-2 text-primary dark:text-slate-200">
+                <h1 className='text-5xl py-2 font-noteworthy'>s.h.l</h1>
+
+                <div className="flex justify-between items-center">
+                    <div className='font-medium text-3xl text-primary dark:text-slate-200'>
+                        이승현
+                    </div>
                     <div>
-                        KR/ENG
+                        <div className="lang_switch">
+                            <Link to={`/kr`}>한국어</Link> / <Link to={`/`}>ENG</Link>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
-    );
+        );
+    }
+    else {
+        return (
+            <header className="grid grid-rows-2 text-primary dark:text-slate-200">
+                <h1 className='text-5xl py-2 font-noteworthy'>s.h.l</h1>
+
+                <div className="flex justify-between items-center">
+                    <div className='font-medium text-2xl text-primary dark:text-slate-200'>
+                        <Name primary={"Joe Lee"} secondary={"Seunghyun Lee"} />
+                    </div>
+                    <div>
+                        <div className="lang_switch">
+                            <Link to={`/kr`}>한국어</Link> / <Link to={`/`}>ENG</Link>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        );
+    }
+
 }
