@@ -1,22 +1,60 @@
 import { Link, Outlet } from "react-router-dom";
+import { useState, useEffect } from "react";
+import moment from "moment";
+import { tz } from "moment-timezone";
+
+function useTime() {
+    const [time, setTime] = useState(moment());
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(moment());
+        }, 1000);
+        return () => clearInterval(interval);
+    });
+    return time;
+}
+
+// .tz("America/Toronto").format("MMMM Do, h:mm:ss A")
+
+function Clock({ time, location }) {
+    if (location === "America/Toronto") {
+        return (
+            <div className="font-normal">{time.tz("America/Toronto").format("MMMM Do, h:mm:ss A")}</div>
+        );
+    }
+    else if (location === "Asia/Seoul") {
+        return (
+            <div className="font-normal">{time.tz("Asia/Seoul").format("MMMM Do, h:mm:ss A")}</div>
+        );
+    }
+}
 
 export default function Navbar() {
+    const time = useTime();
+
     return (
         <nav className='text-gray-500 flex-col'>
-            <div>Engineering Student at <a href="https://www.utoronto.ca/">University of Toronto</a></div>
-            <div>In Toronto, at 15:37</div>
-            <div className="h-4"></div>
-            <div>
-                When not studying, I work on <Link to={`/Projects`}>projects</Link> and do <Link to={`/Creative`}>creative stuff</Link>.
+            <div>Engineering Student at University of Toronto</div>
+            <div className="time-container flex-col">
+                <p>Currently located in <b>Toronto 🇨🇦</b>, at</p>
+                <Clock time={time} location={"America/Toronto"} />
+                <div className="h-2"></div>
+                <div>But from <b>Seoul 🇰🇷</b>, at</div>
+                <Clock time={time} location={"Asia/Seoul"} />
             </div>
-            <div className="h-4"></div>
-            <div>
-                <Link to={`/About`}>- About me</Link>
+            <div className="flex-col">
+                <div>
+                    <Link to={`/About`}>about</Link>
+                </div>
+                <div>
+                    <Link to={`/Projects`}>projects</Link>
+                </div>
+                <div>
+                    <Link to={`/Creative`}>creative stuff</Link>
+                </div>
             </div>
-            <div>
-                <Link to={`/Posts`}><h2 className="text-2l font-semibold">Posts</h2></Link>
-                <Outlet />
-            </div>
+
+
         </nav>
     );
 }

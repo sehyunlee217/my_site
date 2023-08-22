@@ -1,7 +1,12 @@
 export default function Posts() {
     return (
         <>
-            <div>- Will implement posts section in the future</div>
+            <div className="h-4"></div>
+            <div>
+                <Link to={`/Posts`}><h2 className="text-2xl font-semibold">Posts</h2></Link>
+                <Outlet />
+            </div>
+            <div>- Currently in process</div>
         </>
     );
 }
