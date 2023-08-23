@@ -25,7 +25,7 @@ function Clock({ time, location, lang }) {
         }
         else if (location === "Asia/Seoul") {
             return (
-                <span className="">집은 <b>서울</b>이며, 서울은 현재 {time.tz("Asia/Seoul").format(" h:mm:ss A")}.</span>
+                <span className="">집은 <b>서울</b>이며, <b>서울</b>은 현재 {time.tz("Asia/Seoul").format(" h:mm:ss A")}.</span>
             );
         }
     }
