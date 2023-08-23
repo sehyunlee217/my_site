@@ -48,8 +48,8 @@ export default function Navbar({ lang }) {
 
     if (lang === "kr") {
         return (
-            <nav className='text-gray-600 flex-col text-2xl dark:text-slate-200'>
-                <div className=""><b>토론토 대학교</b> - 산업공학과</div>
+            <nav className='text-gray-600 font-kr_reg flex-col text-2xl dark:text-slate-200'>
+                <div className="">안녕하세요, 토론토 대학교 산업공학과 학생입니다.</div>
                 <div className="time-container flex-col">
                     <Clock time={time} lang={"kr"} location={"America/Toronto"} />
                     <span> </span>

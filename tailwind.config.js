@@ -13,7 +13,9 @@ export default {
       },
       fontFamily: {
         "noteworthy": ["Noteworthy", "serif"],
-        "main": ["Noto Sans KR", "serif"]
+        "main": ["Noto Sans KR", "serif"],
+        "roboto": ["Roboto Condensed", "serif"],
+        "kr_reg": ["Noto Serif KR", "serif"],
       },
     },
     screens: {

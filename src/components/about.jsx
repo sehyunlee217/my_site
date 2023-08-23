@@ -31,7 +31,15 @@ export default function About() {
                     <div>
                     </div>
                     <div className="h-8"></div>
+                    <div>Education</div>
+                    <div className="h-8"></div>
+
+
+                    <div>Skills</div>
+                    <div className="h-8"></div>
                 </div>
+
+
                 <div className="flex-col">
                     <div>
                         github: <a href="https://github.com/sehyunlee217">/sehyunlee217</a>
