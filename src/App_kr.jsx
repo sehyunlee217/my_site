@@ -6,7 +6,7 @@ import Posts from './components/posts';
 function App_kr() {
 
     return (
-        <main className='h-screen px-10 py-10 font-sans font-light flex-col gap-4 bg-background dark:bg-primary_dark'>
+        <main className='h-screen px-10 py-10 font-main font-light flex-col gap-4 bg-background dark:bg-primary_dark'>
             <Header lang={"kr"} />
             <Navbar lang={"kr"} />
         </main>

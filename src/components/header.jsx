@@ -17,11 +17,11 @@ function Name({ primary, secondary }) {
 export default function Header({ lang }) {
     if (lang === "kr") {
         return (
-            <header className="grid grid-rows-2 text-primary dark:text-slate-200">
-                <h1 className='text-5xl py-2 font-noteworthy'>s.h.l</h1>
+            <header className="grid grid-rows-2 font-kr font-extralight text-primary dark:text-slate-200">
+                <h1 className='text-6xl py-2 font-noteworthy'>s.h.l</h1>
 
                 <div className="flex justify-between items-center">
-                    <div className='name font-medium text-2xl text-primary dark:text-slate-200 decoration-dotted'>
+                    <div className='name font-medium text-3xl text-primary dark:text-slate-200 decoration-dotted'>
                         이승현
                     </div>
                     <div>
@@ -37,10 +37,10 @@ export default function Header({ lang }) {
     else {
         return (
             <header className="grid grid-rows-2 text-primary dark:text-slate-200">
-                <h1 className='text-5xl py-2 font-noteworthy'>s.h.l</h1>
+                <h1 className='text-6xl py-2 font-noteworthy'>s.h.l</h1>
 
                 <div className="flex justify-between items-center">
-                    <div className='name font-medium text-2xl text-primary dark:text-slate-200'>
+                    <div className='name font-medium text-3xl text-primary dark:text-slate-200'>
                         <Name primary={"Joe Lee"} secondary={"Seunghyun Lee"} />
                     </div>
                     <div>

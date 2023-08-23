@@ -20,7 +20,7 @@ export default function Creative() {
 
     console.log(imgPosts);
     return (
-        <div className="h-screen flex flex-wrap">
+        <div className="h-full flex flex-wrap">
             {imgPosts}
         </div>
     );

@@ -48,7 +48,7 @@ export default function Navbar({ lang }) {
 
     if (lang === "kr") {
         return (
-            <nav className='text-gray-600 flex-col dark:text-slate-200'>
+            <nav className='text-gray-600 flex-col text-2xl dark:text-slate-200'>
                 <div className=""><b>토론토 대학교</b> - 산업공학과</div>
                 <div className="time-container flex-col">
                     <Clock time={time} lang={"kr"} location={"America/Toronto"} />
@@ -71,7 +71,7 @@ export default function Navbar({ lang }) {
     }
     else {
         return (
-            <nav className='text-gray-600 flex-col dark:text-slate-200'>
+            <nav className='text-gray-600 flex-col text-2xl dark:text-slate-200'>
                 <div>Studying engineering at University of Toronto</div>
                 <div className="time-container flex-col">
                     <Clock time={time} location={"America/Toronto"} />

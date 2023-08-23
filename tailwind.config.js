@@ -12,7 +12,8 @@ export default {
         background: "#e4f1ee"
       },
       fontFamily: {
-        "noteworthy": ["Noteworthy", "serif"]
+        "noteworthy": ["Noteworthy", "serif"],
+        "main": ["Noto Sans KR", "serif"]
       },
     },
     screens: {
