@@ -41,7 +41,7 @@ export default function Header({ lang }) {
 
                 <div className="flex justify-between items-center font-roboto">
                     <div className='name text-4xl text-primary dark:text-slate-200'>
-                        <Name primary={"Seunghyun Lee"} secondary={"Joe Lee"} />
+                        <Name primary={"Joe Lee"} secondary={"Seunghyun Lee"} />
                     </div>
                     <div>
                         <div className="lang_switch font-main">

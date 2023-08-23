@@ -9,7 +9,8 @@ export default {
       colors: {
         primary: "#106B6B",
         primary_dark: "#1C2B2B",
-        background: "#e4f1ee"
+        background: "#e4f1ee",
+        font_dark: "#e2e8f0"
       },
       fontFamily: {
         "noteworthy": ["Noteworthy", "serif"],

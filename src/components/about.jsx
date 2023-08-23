@@ -1,4 +1,3 @@
-import about from "../assets/jl_about.svg";
 import { Link } from "react-router-dom";
 
 export default function About() {
@@ -7,7 +6,7 @@ export default function About() {
 
     return (
         <>
-            <main className='px-10 py-10 h-full font-main font-light flex-col gap-4 text-gray-600 dark:text-slate-200 dark:bg-primary_dark'>
+            <main className='px-10 py-10 h-screen font-main font-light flex-col gap-4 text-gray-600 dark:text-slate-200 dark:bg-primary_dark'>
                 <header>
                     <h1 className='text-5xl py-2 font-noteworthy'>about</h1>
                 </header>
