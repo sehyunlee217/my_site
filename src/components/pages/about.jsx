@@ -5,7 +5,7 @@ import Header from "../header";
 export default function About() {
 
     return (
-        <div className="about px-10 dark:bg-primary_dark">
+        <div className="about px-10 bg-font_dark dark:bg-primary_dark">
             <Header type={"about"} />
             <div >
                 <div className="text-primary_dark dark:text-font_dark font-main flex flex-col text-xl gap-5 sm:gap-20 sm:text-2xl sm:flex-row ">

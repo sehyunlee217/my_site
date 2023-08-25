@@ -23,7 +23,7 @@ import Home from './components/pages/home';
 function App() {
 
   return (
-    <div className='font-main font-light dark:bg-primary_dark'>
+    <div className='font-main font-light bg-font_dark dark:bg-primary_dark'>
       <div id="content" className="px-10">
         <Header />
         <Home />
