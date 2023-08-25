@@ -7,16 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#106B6B",
+        // traditional colors from https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=tipntech&wr_id=38359
+        primary: "#245441", // traditional korean green / 전통 하염색
         primary_dark: "#1C2B2B",
         background: "#e4f1ee",
-        font_dark: "#e2e8f0"
+        font_dark: "#E7E6D2", // traditional korean white / 전통 유배색
+        korean_red: "#F15B5B", // traditional korean red / 전통 홍색,
+        korean_oak: "#9ED6C0", // traditional green/blue color / 전통 옥색
+        korean_umber: "#9F494C", // traditional uber / 전통 적토색
+        korean_orange: "#EA8474" // traditional orange / 전통 담주색
       },
       fontFamily: {
         "noteworthy": ["Noteworthy", "serif"],
         "main": ["Noto Sans KR", "serif"],
         "roboto": ["Roboto Condensed", "serif"],
         "kr_reg": ["Noto Serif KR", "serif"],
+        "crimson": ["Crimson Text", "serif"]
       },
     },
     screens: {

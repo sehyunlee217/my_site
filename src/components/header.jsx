@@ -14,44 +14,51 @@ function Name({ primary, secondary }) {
 
 }
 
-export default function Header({ lang }) {
+export default function Header({ lang, type }) {
+    let headerText;
+    let switchAddress = { en: "/", kr: "/kr" };
+
     if (lang === "kr") {
-        return (
-            <header className="grid grid-rows-2  text-primary dark:text-slate-200">
-                <h1 className='text-6xl py-2 font-noteworthy'>s.h.l</h1>
-
-                <div className="flex font-kr_reg justify-between items-center">
-                    <div className='name text-4xl tracking-wide font-extrabold text-primary dark:text-slate-200 decoration-dotted'>
-                        이승현
-                    </div>
-                    <div>
-                        <div className="lang_switch font-main">
-                            <Link to={`/kr`}>한국어</Link> / <Link to={`/`}>ENG</Link>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
+        headerText = (
+            <div className='font-kr_reg text-4xl pt-3 sm:pt-5'>
+                <Link to={`/kr`}>이승현</Link>
+            </div>
         );
     }
     else {
-        return (
-            <header className="grid grid-rows-2 text-primary dark:text-slate-200">
-                <h1 className='text-6xl py-2 font-noteworthy'>s.h.l</h1>
-
-                <div className="flex justify-between items-center font-roboto">
-                    <div className='name text-4xl text-primary dark:text-slate-200'>
-                        <Name primary={"Joe Lee"} secondary={"Seunghyun Lee"} />
-                    </div>
-                    <div>
-                        <div className="lang_switch font-main">
-                            <Link to={`/kr`}>한국어</Link> / <Link to={`/`}>ENG</Link>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
+        headerText = (
+            <div className="font-noteworthy">
+                <Link to={`/`}>
+                    <Name primary={"s.h.l"} secondary={"seung.hyun.lee"} />
+                </Link>
+            </div>
         );
     }
+
+    if (type === "about") {
+        switchAddress = {
+            en: "/About", kr: "/About/kr"
+        };
+    }
+    return (
+        <header className="text-primary dark:text-font_dark flex justify-between pt-10 pb-5">
+            <div>
+                <div className='name text-5xl sm:text-6xl'>{headerText}</div>
+            </div>
+            <div className="no-wavy font-main flex justify-center items-end gap-3">
+                <Link className="block" to={switchAddress.kr}>
+                    <div>한</div>
+                    <div>국</div>
+                    <div>어</div>
+                </Link>
+                <Link className="block" to={switchAddress.en}>
+                    <div>E</div>
+                    <div>N</div>
+                    <div>G</div>
+                </Link>
+            </div>
+        </header>
+
+    );
 
 }

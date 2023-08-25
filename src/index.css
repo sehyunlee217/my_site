@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR:wght@400;700;900&family=Roboto+Condensed:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR:wght@400;700;900&family=Roboto+Condensed:ital,wght@1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, main{
-  background-color: #e4f1ee;
-  height: 100vh;
-}
-
-nav> *{
-  margin: 0.3em 0;
+html, body, #root, #root>div{
+  height: 100%;
+  overflow: auto;
 }
 
 #error-page {
@@ -21,16 +17,20 @@ nav> *{
   width: 100%;
 }
 
-a, .name{
-  transition-property: background-color;
-  transition-duration: .5s;
-  transition-timing-function: ease-out;
+a{
+  transition: 0.5s ease-out;
   transition-delay: 0.1s;
-  text-decoration: wavy underline rgb(229, 88, 88);
+  transition-property: background-color;
+  text-decoration: wavy underline rgba(241,91,91) 2px; 
+  text-underline-offset: 6px;
 }
 
 a:hover{
-  background-color: #c0d8d28f
+  background-color: #ea84748a
+}
+
+.no-wavy>a{
+  text-decoration: none;
 }
 
 b{

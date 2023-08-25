@@ -1,14 +1,16 @@
 import './index.css';
 import Header from './components/header';
-import Navbar from './components/navbar';
-import Posts from './components/posts';
+import Home from './components/pages/home';
+// import Posts from './components/posts';
 
 function App_kr() {
 
     return (
-        <main className='h-screen px-10 py-10 font-main font-light flex-col gap-4 bg-background dark:bg-primary_dark'>
-            <Header lang={"kr"} />
-            <Navbar lang={"kr"} />
+        <main className='h-screen  font-main font-light dark:bg-primary_dark'>
+            <div id="content" className="px-10">
+                <Header lang={"kr"} />
+                <Home lang={"kr"} />
+            </div>
         </main>
     );
 }
