@@ -18,7 +18,7 @@ import p17 from "../../assets/images/17.jpeg";
 import p18 from "../../assets/images/18.jpeg";
 import p19 from "../../assets/images/19.jpeg";
 import p20 from "../../assets/images/20.jpeg";
-import p21 from "../../assets/images/21.jpeg";
+import p21 from "../../assets/images/21.png";
 import p22 from "../../assets/images/22.jpeg";
 import p23 from "../../assets/images/23.jpeg";
 import p24 from "../../assets/images/24.jpg";
@@ -141,7 +141,7 @@ const imgArray = [
     {
         id: 24,
         src: p24,
-        text: "First time ever painting on a wall",
+        text: "Paints for the ural",
     },
 
 ];
@@ -166,16 +166,49 @@ export default function Creative() {
     );
 
     return (
-        <div className="about px-10 pb-10 text-primary bg-font_dark dark:bg-primary_dark dark:text-font_dark">
+        <div className="about px-10 pb-10 font-main  text-primary bg-font_dark dark:bg-primary_dark dark:text-font_dark">
             <Header type={"creative"} />
             <div className="flex flex-col" >
-                <div className=" font-main flex flex-col text-xl gap-5 sm:gap-20 sm:text-2xl sm:flex-row ">
+                <div className=" flex flex-col text-xl gap-5 sm:gap-20 sm:text-2xl sm:flex-row ">
                     <Navbar />
                 </div>
                 <div className="w-auto h-full post-grid my-5">
                     {imgPosts}
                 </div>
-                <div className="text-xl font-main flex justify-between">
+                <div className="pb-4 text-base sm:text-xl flex flex-col">Hi, thanks for making it this far.
+                    <div className="p-1"></div>
+                    I've been drawing and painting since I was able to hold on to a pencil, I think.
+                    <div className="p-1"></div>
+                    Some of my favorite artists includes:
+                    <ul className="flex gap-4">
+                        <li>
+                            <a href="https://www.francis-bacon.com/paintings">Francis Bacon</a>
+                        </li>
+                        <li>
+                            <a href="https://www.henrimatisse.org/">Henri Matisse</a>
+                        </li>
+                        <li>
+                            <a href="https://www.michelangelo.org/">Michelangelo</a>
+                        </li>
+                    </ul>
+                    <div className="p-2"></div>
+                    Alhough, I don't have many pictures of my paintings/drawings as I left most of them at school during COVID
+                    and never got the change to pick them up. Hopefully, I'll be able to drop by and
+                    grab some of my old paintings if they're still there.
+                    I haven't really had the opportunity to get back into drawing and painting since I was in the military.
+                    <div className="p-1"></div>
+                    The drawing of Abel(The Weeknd) is the most recent one.
+                    I'm hoping to get back into drawing while I'm here in Toronto.
+                    Planning to get some live/quick sketching done outside, at least before it gets too cold.
+                    <div className="p-1"></div>
+                    I've picked up photography last winter and it's been difficult, but also quite enjoyable.
+                    It's very different from drawing but similiar in the sense that you get to play around with light.
+                    <div className="p-1"></div>
+                    There's definitely a more nostalgic element to photography, which is my favorite part, as it captures real moments and memories.
+                    <div className="p-1"></div>
+                    Feel free to reach out if you want to talk about programming, art, and photography.
+                </div>
+                <div className="text-xs sm:text-base font-main flex justify-between">
                     <div>Photos shot on <span className="first-line: uppercase">Fuj<span className=" text-red-500">i</span>film</span> XS-10 using FUJ<span className=" text-red-500">I</span>NON XF18-55mm F2.8-4</div>
                     <div>More Photos at <a href="https://www.instagram.com/_joeleeframes/">@_joeleeframes</a></div>
                 </div>
