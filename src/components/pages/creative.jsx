@@ -141,7 +141,7 @@ const imgArray = [
     {
         id: 24,
         src: p24,
-        text: "Paints for the ural",
+        text: "Paints for the mural",
     },
 
 ];
@@ -166,54 +166,68 @@ export default function Creative() {
     );
 
     return (
-        <div className="about px-10 pb-10 font-main  text-primary bg-font_dark dark:bg-primary_dark dark:text-font_dark">
+        <div className="about px-10 pb-5 font-main  text-primary bg-font_dark dark:bg-primary_dark dark:text-font_dark">
             <Header type={"creative"} />
             <div className="flex flex-col" >
                 <div className=" flex flex-col text-xl gap-5 sm:gap-20 sm:text-2xl sm:flex-row ">
                     <Navbar />
                 </div>
+                <div className="pt-5 text-base">
+                    The colors used in this website are variations of the traditional Korean colors also known as <span className=" font-kr_reg font-extrabold"><span className=" text-korean_red">Oh-</span><span className=" text-korean_blue">bang</span>
+                        <span className=" text-korean_yellow">saek</span><span className="dark:text-background">(오방</span><span className=" text-primary_dark dark:text-background">색)</span></span>,
+                    mostly inpired by the more worn-out colors of <a href="https://ko.wikipedia.org/wiki/%EB%8B%A8%EC%B2%AD#/media/%ED%8C%8C%EC%9D%BC:Gyeongbokgung-05.jpg">Dancheong(대청)</a>.
+                </div>
                 <div className="w-auto h-full post-grid my-5">
                     {imgPosts}
                 </div>
-                <div className="pb-4 text-base sm:text-xl flex flex-col">Hi, thanks for making it this far.
-                    <div className="p-1"></div>
-                    I've been drawing and painting since I was able to hold on to a pencil, I think.
-                    <div className="p-1"></div>
-                    Some of my favorite artists includes:
-                    <ul className="flex gap-4">
-                        <li>
-                            <a href="https://www.francis-bacon.com/paintings">Francis Bacon</a>
-                        </li>
-                        <li>
-                            <a href="https://www.henrimatisse.org/">Henri Matisse</a>
-                        </li>
-                        <li>
-                            <a href="https://www.michelangelo.org/">Michelangelo</a>
-                        </li>
-                    </ul>
-                    <div className="p-2"></div>
-                    Alhough, I don't have many pictures of my paintings/drawings as I left most of them at school during COVID
-                    and never got the change to pick them up. Hopefully, I'll be able to drop by and
-                    grab some of my old paintings if they're still there.
-                    I haven't really had the opportunity to get back into drawing and painting since I was in the military.
-                    <div className="p-1"></div>
-                    The drawing of Abel(The Weeknd) is the most recent one.
-                    I'm hoping to get back into drawing while I'm here in Toronto.
-                    Planning to get some live/quick sketching done outside, at least before it gets too cold.
-                    <div className="p-1"></div>
-                    I've picked up photography last winter and it's been difficult, but also quite enjoyable.
-                    It's very different from drawing but similiar in the sense that you get to play around with light.
-                    <div className="p-1"></div>
-                    There's definitely a more nostalgic element to photography, which is my favorite part, as it captures real moments and memories.
-                    <div className="p-1"></div>
-                    Feel free to reach out if you want to talk about programming, art, and photography.
+                <div className="text-box flex text-base sm:text-xl flex-col sm:flex-row gap-4 sm:gap-10">
+                    <div className="flex flex-col">
+                        Hi, thanks for making it this far !
+                        I've been drawing since I was able to hold on to a pencil, I think.
+                        <div className="p-1"></div>
+                        Some of my favorite artists includes:
+                        <div className="p-1"></div>
+                        <ul className="flex flex-col gap-2 sm:gap-5">
+                            <li>
+                                <a href="https://artsandculture.google.com/asset/due-americani-francis-bacon/4wFu8eXTUphh0Q"><b>Francis Bacon</b></a>
+                                <span> - incredible way of expressing one's emotions and energy, though being quite violent.</span>
+                            </li>
+                            <li>
+                                <a href="https://artsandculture.google.com/asset/portrait-of-madame-matisse-the-green-line/pQER-gMjYy2etA"><b>Henri Matisse</b></a>
+                                <span> - the best colors.</span>
+                            </li>
+                            <li>
+                                <a href="https://artsandculture.google.com/asset/david-michelangelo/mQG0Xq3HvT4oRQ"><b>Michelangelo</b></a>
+                                <span> - the most talented sculptor in history.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        Unfortunately, most of my paintings/drawings were left behind during COVID.
+                        I do plan to pick up my old paintings one day, as they're probably still there.
+                        <div className="p-1"></div>
+                        The drawing of Abel (The Weeknd) is my most recent drawing.
+                        I haven't really had the time nor the motivation to get back into drawing after being in the military.
+                        <div className="p-1"></div>
+                        I hope to get back into drawing while I'm here in Toronto.
+                        My current plan is to get some real life sketches done outside, at least before it gets too cold.
+                    </div>
+                    <div className="flex flex-col">
+                        I've picked up photography last winter and it's been difficult, but also quite enjoyable.
+                        It's very different from drawing but ironically similiar in the sense that you get to play around with light.
+                        <div className="p-1"></div>
+                        There's definitely a more nostalgic element to photography, which is my favorite part, as it captures real moments and memories.
+                        <div className="p-1"></div>
+                        Feel free to reach out if you want to talk about programming, art, and photography.
+                    </div>
                 </div>
-                <div className="text-xs sm:text-base font-main flex justify-between">
-                    <div>Photos shot on <span className="first-line: uppercase">Fuj<span className=" text-red-500">i</span>film</span> XS-10 using FUJ<span className=" text-red-500">I</span>NON XF18-55mm F2.8-4</div>
+
+                <div className="text-xs sm:text-base font-main flex justify-between pt-8">
+                    <div>Photos shot on <span className="first-line: uppercase">Fuj<span className=" text-red-500">i</span>film</span> X-S10 using FUJ<span className=" text-red-500">I</span>NON XF18-55mm F2.8-4</div>
                     <div>More Photos at <a href="https://www.instagram.com/_joeleeframes/">@_joeleeframes</a></div>
                 </div>
             </div>
-        </div>
+        </div >
 
     );
 };;
