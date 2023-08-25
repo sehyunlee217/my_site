@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-export default function Navbar({ type }) {
-    if (type === "about") {
+export default function Navbar({ lang }) {
+    if (lang === "kr") {
         return (
             <div id="nav" className="text-base text-primary dark:text-font_dark font-roboto  font-extrabold flex gap-4 mt-0 justify-between sm:text-2xl sm:gap-2 sm:flex-col sm:justify-start">
                 <div>

@@ -20,7 +20,7 @@ export default function Header({ lang, type }) {
 
     if (lang === "kr") {
         headerText = (
-            <div className='font-kr_reg text-4xl pt-3 sm:pt-5'>
+            <div className='font-kr_reg text-5xl pt-3 sm:pt-5'>
                 <Link to={`/kr`}>이승현</Link>
             </div>
         );
@@ -40,6 +40,13 @@ export default function Header({ lang, type }) {
             en: "/About", kr: "/About/kr"
         };
     }
+
+    if (type === "creative") {
+        switchAddress = {
+            en: "/Creative", kr: "/Creative"
+        };
+    }
+
     return (
         <header className="text-primary dark:text-font_dark flex justify-between pt-10 pb-5">
             <div>

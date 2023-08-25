@@ -15,7 +15,11 @@ export default {
         korean_red: "#F15B5B", // traditional korean red / 전통 홍색,
         korean_oak: "#9ED6C0", // traditional green/blue color / 전통 옥색
         korean_umber: "#9F494C", // traditional uber / 전통 적토색
-        korean_orange: "#EA8474" // traditional orange / 전통 담주색
+        korean_orange: "#EA8474", // traditional orange / 전통 담주색
+        korean_blue: "#1583AF", // traditional blue / 전통 흑청색
+        korean_lightblue: "#18B4E9", // traditional light blue / 전통 청벽색
+        korean_yellow: "#F1A55A", // traditional yellow / 송화색
+        korean_yellowgreen: "#16AA52" // traditional yellowgreen / 명록색
       },
       fontFamily: {
         "noteworthy": ["Noteworthy", "serif"],

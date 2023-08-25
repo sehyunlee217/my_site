@@ -17,15 +17,40 @@ import p16 from "../../assets/images/16.jpeg";
 import p17 from "../../assets/images/17.jpeg";
 import p18 from "../../assets/images/18.jpeg";
 import p19 from "../../assets/images/19.jpeg";
+import p20 from "../../assets/images/20.jpeg";
+import p21 from "../../assets/images/21.jpeg";
+import p22 from "../../assets/images/22.jpeg";
+import p23 from "../../assets/images/23.jpeg";
+import p24 from "../../assets/images/24.jpg";
+
+
+
+import Header from "../header";
+import Navbar from "../navbar";
 
 // Importing each individual images for now, will update with DB once 
 // I fully learn & understand Node.JS / Express
 
 const imgArray = [
     {
-        id: 1,
-        src: p1,
-        text: "Princess Park, North Vancouver",
+        id: 13,
+        src: p13,
+        text: "Abel Tesfaye(2023), Graphite on paper",
+
+    },
+    {
+        id: 23,
+        src: p23,
+        text: "Study of a skull, charcoal on paper",
+    },
+    {
+        id: 20,
+        src: p20,
+        text: "Waves, oil on canvas",
+    }, {
+        id: 21,
+        src: p21,
+        text: "The Fall, graphite on paper",
     },
     {
         id: 2,
@@ -80,9 +105,9 @@ const imgArray = [
         src: p12,
         text: "The Dance, Venezia",
     }, {
-        id: 13,
-        src: p13,
-        text: "Abel Tesfaye(2023), Graphite on paper",
+        id: 1,
+        src: p1,
+        text: "Princess Park, North Vancouver",
     }, {
         id: 14,
         src: p14,
@@ -108,6 +133,17 @@ const imgArray = [
         src: p19,
         text: "Insa-dong, Seoul",
     },
+    {
+        id: 22,
+        src: p22,
+        text: "Mural at an elementary school in Incheon",
+    },
+    {
+        id: 24,
+        src: p24,
+        text: "First time ever painting on a wall",
+    },
+
 ];
 
 
@@ -116,7 +152,7 @@ function Post({ src, text }) {
         <div className="post relative cursor-pointer border-0 rounded-md items-center content-center" >
             <img src={src} />
             <div className="post-text w-full">
-                <div className="flex justify-center items-center flex-wrap p-6 text-neutral-200 font-bold">{text}</div>
+                <div className="flex justify-center items-center flex-wrap p-6 font-roboto text-font_dark font-bold">{text}</div>
             </div>
         </div>
     );
@@ -130,16 +166,21 @@ export default function Creative() {
     );
 
     return (
-        <div className="dark:bg-primary_dark text-primary p-4 font-roboto">
-            <div className="dark:text-font_dark text-xl">
-                <div className=" first-letter:text-6xl">Photos shot on <span className="first-line: uppercase">Fuj<span className=" text-red-500">i</span>film</span> XS-10 using FUJ<span className=" text-red-500">I</span>NON XF18-55mm F2.8-4</div>
-                <div>More Photos available at <a href="https://www.instagram.com/_joeleeframes/">@_joeleeframes</a></div>
-            </div>
-            <div className="w-auto h-full post-grid my-4">
-                {imgPosts}
+        <div className="about px-10 pb-10 text-primary bg-font_dark dark:bg-primary_dark dark:text-font_dark">
+            <Header type={"creative"} />
+            <div className="flex flex-col" >
+                <div className=" font-main flex flex-col text-xl gap-5 sm:gap-20 sm:text-2xl sm:flex-row ">
+                    <Navbar />
+                </div>
+                <div className="w-auto h-full post-grid my-5">
+                    {imgPosts}
+                </div>
+                <div className="text-xl font-main flex justify-between">
+                    <div>Photos shot on <span className="first-line: uppercase">Fuj<span className=" text-red-500">i</span>film</span> XS-10 using FUJ<span className=" text-red-500">I</span>NON XF18-55mm F2.8-4</div>
+                    <div>More Photos at <a href="https://www.instagram.com/_joeleeframes/">@_joeleeframes</a></div>
+                </div>
             </div>
         </div>
 
     );
-
-};
+};;
