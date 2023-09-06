@@ -35,7 +35,7 @@ export default function Home({ lang }) {
 
     return (
         <nav className='h-full  text-primary_dark dark:text-font_dark font-main flex flex-col text-xl gap-5 sm:gap-20 sm:text-2xl sm:flex-row '>
-            <Navbar lang={"kr"} />
+            <Navbar lang={lang} />
             {navDescription}
         </nav>
     );
