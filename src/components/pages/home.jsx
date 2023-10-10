@@ -10,7 +10,7 @@ export default function Home({ lang }) {
         navDescription =
             <div className="flex flex-col gap-2 mt-0">
                 <div className="">토론토 대학교 산업공학과.</div>
-                <div className="">웹개발, 최적화, 데이터분석을 배우고 있습니다.</div>
+                <div className="">웹개발, 운용과학, 그리고 이산수학을 배우고 있습니다.</div>
                 <div>
                     <Clock lang={"kr"} location={"America/Toronto"} />
                 </div>
@@ -23,7 +23,7 @@ export default function Home({ lang }) {
         navDescription =
             <div className="flex flex-col gap-2 mt-0">
                 <div>Second-year Industrial engineering student.</div>
-                <div>Learning web development, optimization, and data analytics.</div>
+                <div>Learning Web Development, Operation Research, and Discrete Math.</div>
                 <div>
                     <Clock location={"America/Toronto"} />
                 </div>
